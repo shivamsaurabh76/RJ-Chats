@@ -62,6 +62,10 @@ This is a full-stack real-time chat application built using the **MERN** (MongoD
 - **npm**
 - **MongoDB Atlas** account
 
+### Author
+
+Developed with ❤️ by [Shivam Saurabh](https://github.com/shivamsaurabh76)
+
 ### Installation
 
 1. Clone the repository
@@ -142,6 +146,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 License
 This project is licensed under the MIT License.
-
-Author
-Developed with ❤️ by [Shivam Saurabh](https://github.com/shivamsaurabh76)
