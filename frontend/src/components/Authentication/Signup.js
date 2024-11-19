@@ -511,7 +511,9 @@ const Signup = () => {
         <>
           <FormControl id="otp">
             <FormLabel>Enter OTP</FormLabel>
-            <HStack spacing="4" justifyContent="center">
+            <HStack     spacing={{ base: "2", sm: "4" }}
+                        justifyContent="center"
+                        wrap="wrap">
               {[0, 1, 2, 3, 4, 5].map((index) => (
                 <Input
                   key={index}
@@ -548,7 +550,7 @@ const Signup = () => {
             </Link>
           </Text>
 
-          <HStack spacing={4} width="100%" mt={4}>
+          <HStack spacing={4} justifyContent="space-between" width="100%" mt={4}>
             <Button
               colorScheme="gray"
               flex="1"
