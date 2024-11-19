@@ -12,6 +12,7 @@ import {
   Text,
   Divider,
   HStack,
+  Container,
 } from "@chakra-ui/react";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import axios from "axios";
@@ -115,7 +116,8 @@ const Login = () => {
 
   return (
     <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
-      <VStack spacing="5px" width="100%" maxWidth="400px" mx="auto">
+      <Container maxW="container.sm" py={1}>
+        <VStack spacing="5px" width="100%">
         <Box 
           width="100%" 
           p={4} 
@@ -211,6 +213,7 @@ const Login = () => {
           </VStack>
           </Box>
         </VStack>
+        </Container>
     </GoogleOAuthProvider>
   );
 };
