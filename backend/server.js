@@ -24,7 +24,7 @@ connectDB();
 app.use(cors({
   origin: process.env.NODE_ENV === 'development' 
     ? ['http://localhost:3000'] 
-    : ['your-production-domain.com'],
+    : ['https://rj-chats-production.up.railway.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
@@ -88,7 +88,7 @@ const io = require("socket.io")(server, {
   cors: {
     origin: process.env.NODE_ENV === 'development' 
       ? "http://localhost:3000" 
-      : "your-production-domain.com",
+      : "https://rj-chats-production.up.railway.app",
   },
 });
 

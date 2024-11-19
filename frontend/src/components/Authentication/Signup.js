@@ -192,8 +192,8 @@ const Signup = () => {
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
       data.append("file", pics);
-      data.append("upload_preset", "chat-app");
-      data.append("cloud_name", "your-cloudinary-cloud-name");
+      data.append("upload_preset", "RJ-Chats");
+      data.append("cloud_name", "dnnpgit1a");
       fetch("https://api.cloudinary.com/v1_1/dnnpgit1a/image/upload", {
         method: "post",
         body: data,
