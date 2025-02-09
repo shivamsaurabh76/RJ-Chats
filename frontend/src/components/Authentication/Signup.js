@@ -19,6 +19,7 @@ import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import cloudinaryConfig from '../config/cloudinaryConfig';
 
 const Signup = () => {
   const [show, setShow] = useState(false);
@@ -192,9 +193,10 @@ const Signup = () => {
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
       data.append("file", pics);
-      data.append("upload_preset", "RJ-Chats");
-      data.append("cloud_name", "dnnpgit1a");
-      fetch("https://api.cloudinary.com/v1_1/dnnpgit1a/image/upload", {
+      data.append("upload_preset", cloudinaryConfig.uploadPreset);
+      data.append("cloud_name", cloudinaryConfig.cloudName);
+      
+      fetch(cloudinaryConfig.uploadUrl, {
         method: "post",
         body: data,
       })
